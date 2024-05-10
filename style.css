@@ -1,0 +1,122 @@
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(black,rgb(1, 177, 226));
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-do{
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    background:linear-gradient(rgb(255, 0, 0),white);
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap:2rem;
+}
+.title{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.title h2{
+    color: #002765;
+}
+.title i{
+    font-size: 26px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #ffffff;
+    border-radius: 30px;
+
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 12px;
+    font-size: 17px;
+    padding-left: 20px;
+}
+button{
+    border: none;
+    cursor: pointer;
+    padding: 15px 50px;
+    border-radius: 30px;
+    background-color: #c78bc4 ;
+    color: #fff;
+    font-size: 18px;
+    transition: all .25s ease;
+}
+button:hover{
+   background-color: rgb(149, 0, 255);
+   
+}
+@media screen and (max-width:400px){
+    button{
+        padding: 15px;
+        border-radius: 0 30px 30px 0;
+    }
+} 
+ul{
+    list-style: none;
+}
+ul li{
+    font-size: 17px;
+    padding :12px 8px 12px 50px;
+    margin-top: 5px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: 0;
+    border: 2px solid #ff5945;
+}
+ul .checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul .checked::before{
+    background-color: #ff5945;
+}
+span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 18px;
+    transition: all .2s ease;
+}
+span:hover {
+color: #fff;
+}
